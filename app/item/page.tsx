@@ -35,7 +35,9 @@ console.log(items);
   return (
     <div className="grid grid-cols-4 gap-4">
       {items?.map((item:any) => (
-              <Card className="w-[250px]">
+              <Card className="w-[250px]"
+              key={item.id}
+              >
         <img
           alt="product image"
           className="w-full h-auto"
@@ -47,8 +49,8 @@ console.log(items);
           }}
           width="250"
         />
-   <CardContent className="space-y-2 p-4">
-          <h2 className="text-lg font-medium">오쏘몰</h2>
+        <CardContent className="space-y-2 p-4">
+          <h2 className="text-lg font-medium"></h2>
           <p className="text-sm">{item.name}</p>
           <div className="space-y-2">
             <p className="text-sm line-through">{item.price}</p>
